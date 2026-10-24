@@ -1,6 +1,8 @@
 services:
   9router:
-    image: decolua/9router:latest
+    # Built from this checkout (the published decolua/9router image lacks fork changes).
+    build: .
+    image: 9router-local:latest
     container_name: 9router
     restart: always
     ports:
